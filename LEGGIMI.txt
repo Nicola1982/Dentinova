@@ -1,0 +1,38 @@
+DENTINOVA 2.1 - gestionale per studio odontoiatrico (Rust)
+(nome precedente: Sorriso. Il nome si cambia in un punto solo: NOME_APP in src/tema.rs)
+
+AVVIO (Windows)
+1. Installa Rust da https://rustup.rs (accetta i Build Tools di Visual Studio se li chiede).
+2. Apri un terminale in questa cartella e lancia:   cargo run --release
+   (la prima compilazione richiede alcuni minuti)
+3. Al primo avvio crea l'utente amministratore (password di almeno 8 caratteri).
+
+Il programma compilato e' in target\release\dentinova.exe: copialo in una cartella stabile
+(es. C:\DentiNova\) e avvialo da li. I dati stanno nella sottocartella "dati" accanto all'exe
+(database, documenti, backup, stampe). Per usare un'altra cartella imposta la variabile
+d'ambiente DENTINOVA_DIR. I dati creati con "Sorriso" (anche della versione 1.0) vengono
+riconosciuti e aggiornati da soli: copia la cartella "dati" accanto al nuovo exe.
+
+RADIOGRAFIE E DICOM
+- Scheda Documenti: trascina sulla finestra i file (anche un'intera cartella di uno studio DICOM
+  copiato da CD) e poi premi "Visualizza": zoom, contrasto, negativo, nitidezza, righello.
+- Formati DICOM supportati: non compresso (8/16 bit, grigi e colore), Deflate, RLE,
+  JPEG baseline, JPEG senza perdita, JPEG-LS (grigi), JPEG 2000 (anche 12/16 bit).
+  File senza intestazione DICOM e con VR implicito/esplicito sono riconosciuti.
+  Non supportati: big-endian (obsoleto), JPEG a 12 bit, JPEG-LS a colori, palette colore.
+  Altri formati immagine: JPG, PNG, BMP, TIFF, WebP.
+- Se un file non si apre, il programma mostra il motivo e non si chiude.
+
+ALTRO
+- Agenda a griglia oraria, scheda paziente con PDF ("Mostra scheda"), fatture con righe libere,
+  prospetto Sistema TS (prepara i dati, non li trasmette), zona pericolosa per il reset dei dati.
+- Interfaccia adattiva: si ridimensiona fino a circa 760x520 pixel.
+- Nel piè di pagina: sviluppatore, versione e anno.
+
+DA SAPERE
+- Prezzi del listino, testi di privacy/consenso e diciture fiscali sono ESEMPI: fai verificare
+  tutto dal commercialista e dal titolare dello studio prima dell'uso reale.
+- Il database non e' cifrato: attiva BitLocker sul disco.
+- "cargo test" lancia i test automatici (disegno di ogni schermata a 4 dimensioni di finestra,
+  lettori DICOM, fatture, backup...).
+- Font Lato con licenza OFL (assets\Lato-OFL.txt).

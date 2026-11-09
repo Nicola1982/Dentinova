@@ -1,0 +1,19 @@
+[package]
+name = "dentinova"
+version = "2.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.29"
+rusqlite = { version = "0.32", features = ["bundled"] }
+sha2 = "0.10"
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "bmp", "tiff", "gif", "webp"] }
+egui_plot = "0.29"
+flate2 = "1.1.10"
+pure_jpegls = "2.0.0"
+dicom-toolkit-jpeg2000 = "0.5.0"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
