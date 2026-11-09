@@ -1,5 +1,7 @@
 # Dentinova (in via di sviluppo)
 DentiNova è un software gestionale leggero, moderno e sicuro per studi odontoiatrici, scritto interamente in Rust per garantire prestazioni elevate e un'esecuzione totalmente locale.
+
+
 🚀 Caratteristiche PrincipaliGestione Pazienti & Agenda:Agenda integrata con griglia oraria.   Scheda paziente dettagliata con generazione e visualizzazione di schede in formato PDF ("Mostra scheda"). 
 
 Visualizzatore Radiografico e DICOM Avanzato:Supporto nativo per file DICOM (non compresso a 8/16 bit grigi e colore, Deflate, RLE, JPEG baseline, lossless, JPEG-LS e JPEG 2000, inclusi file con VR implicito/esplicito) oltre ai formati immagine standard (JPG, PNG, BMP, TIFF, WebP).   Strumenti di analisi dell'immagine integrati: zoom, contrasto, modalità negativo, nitidezza e righello di misurazione. 
